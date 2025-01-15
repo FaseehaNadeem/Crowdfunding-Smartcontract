@@ -38,7 +38,7 @@ contract CrowdFunding {
     }
 
     
-    function refund() public {/
+    function refund() public {
         require(block.timestamp > deadline, "Deadline not yet reached"); 
         require(raisedAmount < target, "Funding target reached, no refunds"); 
         require(contributors[msg.sender] > 0, "You have no contributions"); 
